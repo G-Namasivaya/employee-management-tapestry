@@ -1,0 +1,34 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+    <head><title>Add Employee</title></head>
+    <body style="font-family: Arial, sans-serif; padding: 20px;">
+    <t:CompanyHeader/>
+
+    <div style="margin: 20px;">
+        <h3>Add New Employee</h3>
+        
+        <t:form t:id="employeeForm">
+            <t:errors/>
+            
+            <div style="margin-bottom: 10px;">
+                <t:label for="name"/>
+                <t:textfield t:id="name" value="employee.name"/>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <t:label for="age"/>
+                <t:textfield t:id="age" value="employee.age"/>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <t:label for="address"/>
+                <t:textfield t:id="address" value="employee.address"/>
+            </div>
+            
+            <div>
+                <t:submit value="Save" class="btn btn-primary"/>
+                <t:pagelink page="EmployeeList" class="btn btn-secondary" style="margin-left: 10px;">Cancel</t:pagelink>
+            </div>
+        </t:form>
+    </div>
+    </body>
+</html>

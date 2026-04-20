@@ -1,0 +1,19 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:p="tapestry:parameter">
+    <head><title>Employee List</title></head>
+    <body style="font-family: Arial, sans-serif; padding: 20px;">
+    <t:CompanyHeader/>
+
+    <div style="margin: 20px;">
+        <h3>Employee List</h3>
+        <p style="margin-bottom: 10px;">
+            <t:pagelink page="AddEmployee" class="btn btn-primary">Add New Employee</t:pagelink>
+        </p>
+
+        <t:grid source="employees" row="currentEmployee" add="idLink" reorder="idLink,name,age,address" exclude="id">
+            <p:idLinkCell>
+                <t:pagelink page="EmployeeDetail" context="currentEmployee.id">${currentEmployee.id}</t:pagelink>
+            </p:idLinkCell>
+        </t:grid>
+    </div>
+    </body>
+</html>

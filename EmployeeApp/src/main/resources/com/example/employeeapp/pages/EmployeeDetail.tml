@@ -1,0 +1,31 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:p="tapestry:parameter">
+    <head><title>Employee Details</title></head>
+    <body style="font-family: Arial, sans-serif; padding: 20px;">
+    <t:CompanyHeader/>
+
+    <div style="margin: 20px;">
+        <h3>Employee Details</h3>
+        
+        <t:if test="employee">
+            <dl class="dl-horizontal">
+                <dt>ID</dt>
+                <dd>${employee.id}</dd>
+                
+                <dt>Name</dt>
+                <dd>${employee.name}</dd>
+                
+                <dt>Age</dt>
+                <dd>${employee.age}</dd>
+                
+                <dt>Address</dt>
+                <dd>${employee.address}</dd>
+            </dl>
+            <p:else>
+                <p>Employee not found.</p>
+            </p:else>
+        </t:if>
+        
+        <t:pagelink page="EmployeeList" class="btn btn-secondary">Back to List</t:pagelink>
+    </div>
+    </body>
+</html>
